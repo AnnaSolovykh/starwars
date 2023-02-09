@@ -1,25 +1,41 @@
-import logo from './logo.svg';
 import './App.css';
+import FetchFilms from './FetchFilms';
+import Characters from './FetchCharacters';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+import Home from './Home';
+import {
+
+    BrowserRouter as Router,
+  
+    Routes,
+  
+    Route,
+  
+    Link
+  
+  } from "react-router-dom";
+
+function App () {
+    
+    return (
+        <Router>
+<nav>
+<Link to="/" className='link link-mobile'>HOME</Link>
+<Link to="/FetchFilms" className='link '>Films</Link>
+<Link to="/FetchCharacters" className='link'>Characters </Link>
+</nav>
+           
+        
+
+    <Routes>
+        <Route path="/"  element={<Home />}/>
+        <Route path="/FetchFilms"  element={<FetchFilms/>}/>
+        <Route path="/FetchCharacters" element={<Characters />}/>
+    </Routes>
+    </Router>
+
+    )
 }
 
 export default App;
