@@ -7,36 +7,28 @@ class FilmsDetails extends Component {
     constructor() {
         super()
         this.state = {
-            characters: ['Loading characters...'],
-         
+            characters: ['Loading characters...'],            
         }
     }
 
     componentDidMount() {
-       const charactersArray = [];
-
+        const charactersArray = [];
         
         const fetchCharacters = this.props.characters.map ( (characterUrl, id) => fetch(characterUrl)
         .then (res => res.json())
         .then ( data => {
-
-            console.log(data)
             charactersArray.push(`${data.name} `)
             charactersArray.sort();
-           
-        } ));
-
-        
+        } ))
 
         Promise.all(fetchCharacters)
         .then(promisesArray => {this.setState( {characters: charactersArray} )})
         .catch( (err) => console.log ( 'error:', err ) )
-     
     }
 
     render() {
         
-       return (
+        return (
         <div className="container">
             <h3 className="heading">{this.props.title}</h3> 
             <h4 className="subheading">The director is {this.props.director}.</h4>
@@ -45,15 +37,14 @@ class FilmsDetails extends Component {
             <h4 className="subheading">Names of the characters: </h4>
 
             <ul className="list">
-             { this.state.characters.map (  (character, id) => (
-                <li key={id} className="list-item text"> {character} </li>
-    
-             )
+            
 
-            )  }
+            { this.state.characters.map (  (character, id) => (
+                <li key={id} className="list-item text"> {character} </li>
+            ))  }
             </ul>
     </div>
-       )
+        )
     }
 }
 
