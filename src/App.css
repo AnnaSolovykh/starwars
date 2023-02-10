@@ -1,3 +1,133 @@
-.App {
+
+
+/* Starry Sky */
+
+
+body {
+  background: #000;
+}
+
+#sky {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+#shootingstars {
+  margin: 0;
+  padding: 0;
+  width: 150vh;
+  height: 100vw;
+  position: fixed;
+  overflow: hidden;
+  transform: translatex(calc(50vw - 50%)) translatey(calc(50vh - 50%))
+    rotate(120deg);
+}
+
+.wish {
+  height: 2px;
+  top: 300px;
+  width: 100px;
+  margin: 0;
+  opacity: 0;
+  padding: 0;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  background: linear-gradient(-45deg, white, rgba(0, 0, 255, 0));
+  filter: drop-shadow(0 0 6px rgb(255, 255, 255));
+  overflow: hidden;
+}
+
+/* Navbar */
+
+nav {
+
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+}
+
+.link {
+  text-decoration: none;
+  color: rgb(206, 206, 75);
+  margin: 30px;
+  font-weight: 500;
+  font-size: 30px;  
+  border: 2px solid rgba(255, 255, 0, 0.703);
+  padding: 10px 20px;
+  border-radius: 20px;    
+  cursor: pointer; 
+  z-index: 10;
+
+}
+
+.link:hover {
+  color: white;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;            
+
+}
+
+.label {
+  margin: 30px;   
+  width: 25rem;
+}
+
+.container-wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+
+}
+ 
+.container {
+  text-align: left;
+  border-radius: 20px;
+  border: 2px solid rgb(206, 206, 75);
+  padding: 20px;
+  margin: 50px;
+  flex: 1;
+  width: 20rem;
+}
+
+.heading {
+  font-weight: 800;
+  font-size: 25px;
+  color: rgb(206, 206, 75);
+  letter-spacing: 0.2rem;
   text-align: center;
+}
+
+.subheading {
+  font-size: 17px;
+  font-weight: 400;
+  color: rgb(206, 206, 75);
+  letter-spacing: 0.2rem;
+}
+
+.text {
+  font-size: 15px;
+  font-weight: 200;
+  letter-spacing: 0.1rem;
+  line-height: 1.5;
+  color: white;
+}
+
+.list {
+  
+}
+
+.list-item {
+  text-decoration: none;
+  list-style: none;
+  text-align: left;
+  
 }

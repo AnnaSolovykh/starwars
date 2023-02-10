@@ -1,22 +1,29 @@
 import React from "react";
 import { Component } from "react";
 
+
+
 class FilmsDetails extends Component {
     constructor() {
         super()
         this.state = {
-            characters: ['Loading characters...']
+            characters: ['Loading characters...'],
+         
         }
     }
 
     componentDidMount() {
        const charactersArray = [];
+
         
         const fetchCharacters = this.props.characters.map ( (characterUrl, id) => fetch(characterUrl)
         .then (res => res.json())
         .then ( data => {
-            charactersArray.push(`${data.name}`)
+
+            console.log(data)
+            charactersArray.push(`${data.name} `)
             charactersArray.sort();
+           
         } ));
 
         
@@ -28,20 +35,23 @@ class FilmsDetails extends Component {
     }
 
     render() {
+        
        return (
-        <div>
-        <h3>{this.props.title}</h3> 
-        <h4>The director is {this.props.director}.</h4>
-        <h4>What is the film about?</h4>
-        <p>{this.props.description}</p>
-        <h4>Name of the characters: </h4>
-        <ul>
-            { this.state.characters.map (  (character, id) => (
-                <li key={id}>{character} </li>
-            )
+        <div className="container">
+            <h3 className="heading">{this.props.title}</h3> 
+            <h4 className="subheading">The director is {this.props.director}.</h4>
+            <h4 className="subheading">What is the film about?</h4>
+            <p className="text">{this.props.description}</p>
+            <h4 className="subheading">Names of the characters: </h4>
+
+            <ul className="list">
+             { this.state.characters.map (  (character, id) => (
+                <li key={id} className="list-item text"> {character} </li>
+    
+             )
 
             )  }
-        </ul>
+            </ul>
     </div>
        )
     }

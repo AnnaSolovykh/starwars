@@ -21,7 +21,7 @@ const Characters = ( {peopleData} ) => {
 );
 
         return (
-            <div>
+            <div className="container-wrapper">
                 {charactersList}
             </div>
         )

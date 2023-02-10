@@ -2,40 +2,40 @@ import './App.css';
 import FetchFilms from './FetchFilms';
 import Characters from './FetchCharacters';
 
-
-import Home from './Home';
 import {
-
     BrowserRouter as Router,
-  
     Routes,
-  
-    Route,
-  
-    Link
-  
-  } from "react-router-dom";
+    Route, 
+    Link } from "react-router-dom";
+import StarrySky from './Stars';
 
 function App () {
+
     
     return (
         <Router>
-<nav>
-<Link to="/" className='link link-mobile'>HOME</Link>
-<Link to="/FetchFilms" className='link '>Films</Link>
-<Link to="/FetchCharacters" className='link'>Characters </Link>
-</nav>
-           
+            <StarrySky/>
+        <header>
+            <img src={process.env.PUBLIC_URL + "star.svg"} alt="Star" className="label"/>
+            <img src={process.env.PUBLIC_URL + "wars.svg"} alt="Wars" className="label"/>
+        </header> 
+
+        <nav>
+            <Link to="/" className='link '>FILMS</Link>
+            <Link to="/FetchCharacters" className='link'>CHARACTERS </Link>
+        </nav>
+        
+        <Routes>
+            <Route path="/"  element={<FetchFilms/>}/>
+            <Route path="/FetchCharacters" element={<Characters />}/>
+        </Routes>
+
         
 
-    <Routes>
-        <Route path="/"  element={<Home />}/>
-        <Route path="/FetchFilms"  element={<FetchFilms/>}/>
-        <Route path="/FetchCharacters" element={<Characters />}/>
-    </Routes>
     </Router>
 
     )
+
 }
 
 export default App;

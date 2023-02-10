@@ -3,6 +3,7 @@ import React from "react";
 import { Component } from "react";
 
 
+
 class FetchFilms extends Component {
   constructor(props) {
     super(props)
@@ -22,9 +23,10 @@ componentDidMount() {
 }
 
 render() {
+
   const { data } = this.state;
   return (
-    <div className="App">
+    <div >
       <Films data={data}/>
 
     </div>
