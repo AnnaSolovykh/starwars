@@ -7,6 +7,10 @@ body {
   background: #000;
 }
 
+#App {
+  z-index: -1000;
+}
+
 #sky {
   width: 100vw;
   height: 100vh;
@@ -14,6 +18,7 @@ body {
   overflow: hidden;
   margin: 0;
   padding: 0;
+  z-index: -1000;
 }
 
 #shootingstars {
@@ -25,6 +30,7 @@ body {
   overflow: hidden;
   transform: translatex(calc(50vw - 50%)) translatey(calc(50vh - 50%))
     rotate(120deg);
+    z-index: -1000;
 }
 
 .wish {
@@ -84,6 +90,7 @@ header {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  z-index: -30;
 
 }
 
@@ -95,6 +102,7 @@ header {
   margin: 50px;
   flex: 1;
   width: 20rem;
+  z-index: -20;
 }
 
 .heading {
@@ -103,6 +111,7 @@ header {
   color: rgb(206, 206, 75);
   letter-spacing: 0.2rem;
   text-align: center;
+  z-index: 20;
 }
 
 .subheading {
@@ -127,6 +136,59 @@ header {
   list-style: none;
   text-align: left;
   
+}
+
+.over {
+  z-index: 50;
+}
+
+button {
+  cursor: pointer;
+  z-index: 150;
+
+  color: white;
+  text-decoration: underline;
+}
+
+
+/* Modal */
+
+.modal {
+  z-index: 1000;
+  position: absolute;
+  margin-top: 0;
+}
+/* Loading */
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px;
+}
+
+.loader {
+  color:  rgba(255, 255, 255, 0.685);
+  font-style: italic;
+}
+
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 10px solid rgba(255, 255, 255, 0.575);
+  border-top: 10px solid rgba(237, 237, 124, 0.661);
+  border-radius: 50%;
+  animation: loading 1.5s linear infinite;
 }
 
 @media all and (max-width: 850px) {

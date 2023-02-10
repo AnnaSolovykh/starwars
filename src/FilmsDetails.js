@@ -1,5 +1,6 @@
 import React from "react";
 import { Component } from "react";
+import { Link } from "react-router-dom";
 
 
 
@@ -7,7 +8,8 @@ class FilmsDetails extends Component {
     constructor() {
         super()
         this.state = {
-            characters: ['Loading characters...'],            
+            characters: ['Loading characters...'],
+            personInfo: []        
         }
     }
 
@@ -19,6 +21,7 @@ class FilmsDetails extends Component {
         .then ( data => {
             charactersArray.push(`${data.name} `)
             charactersArray.sort();
+            this.setState( {personInfo: data} )
         } ))
 
         Promise.all(fetchCharacters)
@@ -36,13 +39,16 @@ class FilmsDetails extends Component {
             <p className="text">{this.props.description}</p>
             <h4 className="subheading">Names of the characters: </h4>
 
-            <ul className="list">
+            {/* <ul className="over">
             
 
             { this.state.characters.map (  (character, id) => (
-                <li key={id} className="list-item text"> {character} </li>
+                <Link to="/PeopleInFilms" people={this.state.personInfo} className="over">  
+                    <li key={id} className="list-item text over"> {character} </li>
+                </Link>
+                
             ))  }
-            </ul>
+            </ul> */}
     </div>
         )
     }
