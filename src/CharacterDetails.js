@@ -1,6 +1,5 @@
 import React from "react";
 import { Component } from "react";
-import FeaturedFilms from "./FeaturedFilms";
 
 
 class CharacterDetails extends Component {
@@ -8,7 +7,6 @@ class CharacterDetails extends Component {
         super()
         this.state = {
             films: ['Loading films...'],
-            info: [],
         }
     }
 
@@ -21,7 +19,6 @@ class CharacterDetails extends Component {
         .then ( dataFilm => {
             filmsArray.push(`${dataFilm.title}`)
             filmsArray.sort();
-            this.setState( { info: dataFilm} )
         } ))
 
         Promise.all(fetchFilms)
@@ -41,9 +38,8 @@ class CharacterDetails extends Component {
             <p className="subheading">Featured in:</p>
 
             {this.state.films.map ( (film, id) => (
-                <div>
-                    <p className="text over">{film} </p> 
-                    <FeaturedFilms key={id} info={this.state.info}/>
+                <div key={id}>
+                    <p className="list over">{film} </p> 
                 </div>      
             )
             )}  

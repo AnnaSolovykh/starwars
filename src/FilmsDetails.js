@@ -1,13 +1,11 @@
 import React from "react";
 import { Component } from "react";
-import PeopleInFilms from "./PeopleInFilms";
 
 class FilmsDetails extends Component {
     constructor() {
         super()
         this.state = {
-            characters: ['Loading characters...'],
-            personInfo: []        
+            characters: ['Loading characters...'],      
         }
     }
 
@@ -19,7 +17,6 @@ class FilmsDetails extends Component {
         .then ( data => {
             charactersArray.push(`${data.name} `)
             charactersArray.sort();
-            this.setState( {personInfo: data} )
         } ))
 
         Promise.all(fetchCharacters)
@@ -38,9 +35,8 @@ class FilmsDetails extends Component {
             <h4 className="subheading">Names of the characters: </h4>
 
             { this.state.characters.map (  (character, id) => (
-                <div key={id}>
-                    <p className="text over"> {character}</p>
-                    <PeopleInFilms key={id}  people={this.state.personInfo} />
+                <div key={id} >
+                    <p className="list over"> {character}</p>
                 </div>
 
                 

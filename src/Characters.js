@@ -13,8 +13,7 @@ const Characters = ( {peopleData} ) => {
                 gender={character.gender}
                 skin={character.skin_color}
                 films={character.films}
-                starship={character.starships}
-                />
+                starship={character.starships}/>
             </div>
         )
     }

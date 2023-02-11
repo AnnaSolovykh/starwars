@@ -1,5 +1,4 @@
 
-
 /* Starry Sky */
 
 
@@ -129,17 +128,12 @@ header {
   color: white;
 }
 
-
-
-.special-details {
-  text-align: right;
-  font-size: 11px;
+.list {
+  font-size: 12px;
   font-weight: 200;
   letter-spacing: 0.1rem;
   line-height: 1;
   color: white;
-  font-style: italic;
-
 }
 
 .over {

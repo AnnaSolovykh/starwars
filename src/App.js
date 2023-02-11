@@ -12,7 +12,6 @@ import StarrySky from './Stars';
 
 function App () {
 
-   
     return (
         <Router>
             <StarrySky/> 
