@@ -1,71 +1,19 @@
-# Getting Started with Create React App
+REACT SWAPI STAR WARS PROJECT 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Based on: https://swapi.dev/
 
-## Available Scripts
+Demo: https://starwars-phi.vercel.app
 
-In the project directory, you can run:
+Visiting the main page, you can choose either to view films' descriptions or characters' ones. 
+The first ones are default.
+<img width="1707" alt="sw view" src="https://user-images.githubusercontent.com/114008959/218248307-0571740e-0a7f-4ce6-9e8e-97666c7dd1db.png">
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+By tapping the button "Characters" you can observe the cards of characters, featured in Star wars films. In each character's card you can see the list of films each one featured in.
+<img width="1701" alt="sw characters" src="https://user-images.githubusercontent.com/114008959/218248312-4dca24ce-0d8a-4fd5-935f-a7623a14793d.png">
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+By tapping the button "Films" you can go back to the films page and observe the cards of Star Wars films. In each film's card you can find the list of characters featured in it.
+<img width="1702" alt="sw films" src="https://user-images.githubusercontent.com/114008959/218248309-7faf15f7-9894-4108-b75e-295d985aac16.png">
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# starwars
+Enjoy and thank you for your interest!
+# starwars # swapi
