@@ -8,7 +8,7 @@ import {
     Route, 
     Link } from "react-router-dom";
 import StarrySky from './Stars';
-import FeaturedFilms from './FeaturedFilms';
+
 
 function App () {
 
@@ -24,13 +24,12 @@ function App () {
         <nav>
             <Link to="/" className='link'>FILMS</Link>
             <Link to="/FetchCharacters" className='link'>CHARACTERS </Link>
-            <Link to="/FeaturedFilms" className='link' >fgfgf</Link> 
+
         </nav>
         
         <Routes>
             <Route path="/"  element={<FetchFilms/>}/>
             <Route path="/FetchCharacters" element={<Characters/>}/>
-            <Route path="/FeaturedFilms" element={<FeaturedFilms/>} />
         </Routes>
 
         

@@ -1,8 +1,6 @@
 import React from "react";
 import { Component } from "react";
-import { Link } from "react-router-dom";
-
-
+import PeopleInFilms from "./PeopleInFilms";
 
 class FilmsDetails extends Component {
     constructor() {
@@ -39,16 +37,14 @@ class FilmsDetails extends Component {
             <p className="text">{this.props.description}</p>
             <h4 className="subheading">Names of the characters: </h4>
 
-            {/* <ul className="over">
-            
-
             { this.state.characters.map (  (character, id) => (
-                <Link to="/PeopleInFilms" people={this.state.personInfo} className="over">  
-                    <li key={id} className="list-item text over"> {character} </li>
-                </Link>
+                <div key={id}>
+                    <p className="text over"> {character}</p>
+                    <PeopleInFilms key={id}  people={this.state.personInfo} />
+                </div>
+
                 
             ))  }
-            </ul> */}
     </div>
         )
     }
