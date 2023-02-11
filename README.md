@@ -6,7 +6,7 @@ Based on: https://swapi.dev/
 
 Demo: https://starwars-phi.vercel.app
 
-On the main page, you can choose either to view films' descriptions or characters' ones. 
+On the main page you can choose either to view films' descriptions or characters' ones. 
 The first ones are default.
 <img width="1707" alt="sw view" src="https://user-images.githubusercontent.com/114008959/218248307-0571740e-0a7f-4ce6-9e8e-97666c7dd1db.png">
 
